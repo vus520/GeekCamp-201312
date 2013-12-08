@@ -1,0 +1,18 @@
+cd d:
+cd source/eoeschool/testgit
+
+git init .
+
+#
+git add hello.txt
+git commit -m "this is a hello file."
+
+git checkout hello.txt
+
+#github
+git remote add origin https://github.com/IceskYsl/testgit.git
+git push -u origin master
+
+#
+git status
+git log
