@@ -1,0 +1,132 @@
+==============版本管理员操作========================
+第一步： 创建数据仓库(例如目录为：/f/software/repository/git)
+
+git init --bare shared.git
+说明：
+hoots：钩子。在此文件夹下进行个性化设置。
+exclude:排除：不需要版本的文件在exlude中声明。
+==============开发人员1操作=============================
+
+第二步：进入user1的工作目录（例如/f/develop/workroom/user1） ，复制仓库到本地
+
+git clone /f/software/repository/git/shared.git/ . (注意有个点，表明当前目录)
+
+第三步：设置个人信息
+
+git config user.name "user1"
+git config user.email "user1@163.com"
+
+
+第四步：忽略无需版本控制的文档,例如我想把项目目录下所有.txt的文档忽略，可以进行如下操作
+
+echo "*.txt" > .gitignore
+
+第五步：新建一个文件
+
+echo "User1 add content" > index.jsp
+
+第六步：提交文件
+
+git add index.jsp
+git commit -m "User1 add the file"
+
+
+第七步：把自己的仓库提交到公共服务器
+
+git push origin master
+
+==============开发人员2操作=============================
+
+第八步：进入user2的工作目录（例如/f/develop/workroom/user2） ，复制仓库到本地
+
+git clone /f/software/repository/git/shared.git/ .
+
+第九步：设置个人信息
+
+git config user.name "user2"
+git config user.email "user2@163.com"
+
+第十步：忽略无需版本控制的文档
+
+echo "*.txt" > .gitignore
+
+第十一步: 修改index.jsp文件
+
+echo "User2 add content" >> index.jsp
+
+第十二步：提交文件
+
+git add index.jsp
+git commit -m "User2 add the file!"
+
+
+第十三步：把自己的仓库提交到公共服务器
+
+git push origin master
+
+
+==============开发人员1操作=============================
+第十四步：下载服务器最新数据
+
+git pull 远端服务器共享库的网址
+
+
+*将本地git库中修改的CoreJava项目提交至github中账号为longlifeyw5756的eoeAndroid.git共享库的步骤：
+步骤1、在F:\Android\eoe课程\eoe201312\预科课程\CODE\code\.git中右击鼠标，点击git GUI
+步骤2、git GUI中依次点击
+重新扫描、缓存改动、签名、提交、上传。
+步骤3、在ArbitraryLocation中输入
+https://github.com/longlifeyw5756/eoeAndroid.git
+步骤3、输入账号和密码。
+
+*从https://github.com/longlifeyw5756/eoeAndroid.git克隆共享库
+在CODE文件夹下右击鼠标，点击git bash
+输入
+git clone https://github.com/longlifeyw5756/eoeAndroid ./eoeCoreJava
+
+*从https://github.com/longlifeyw5756/eoeAndroid.git更新共享库
+1、进入CODE/eoeAndroid文件夹
+2、右击鼠标，点击git bash 菜单项
+输入
+git pull https://github.com/longlifeyw5756/eoeAndroid.git
+
+
+
+
+
+
+
+
+https://github.com/longlifeyw5756/eoe201310
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+        https://github.com/longlifeyw5756/eoeAndroid.git
+
+
+
